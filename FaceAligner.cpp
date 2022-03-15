@@ -1,12 +1,18 @@
-#include "FaceAligner.h"
 #include <numeric>
 #include <vector>
-#include "dlib/image_processing/render_face_detections.h"
-#include "dlib/opencv/cv_image.h"
-#include "dlib/opencv/to_open_cv.h"
+
+/**
+ * @Bai Here I change the order of include to avoid compile error.
+ * I moved FaceAligner.h to the bottom so that compiler will include opencv2 first,
+ * then dlib (dlib is also inside FaceAligner.h).
+ */
 #include "opencv2/core.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
+#include "dlib/image_processing/render_face_detections.h"
+#include "dlib/opencv/cv_image.h"
+#include "dlib/opencv/to_open_cv.h"
+#include "FaceAligner.h"
 
 using namespace dlib;
 using namespace std;

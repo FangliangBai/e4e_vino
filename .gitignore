@@ -1,2 +1,4 @@
 # Project exclude paths
 /cmake-build-debug/
+/dlib-19.23/
+/onnxruntime-linux-x64-gpu-1.10.0/

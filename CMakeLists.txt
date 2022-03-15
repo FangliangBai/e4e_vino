@@ -14,7 +14,9 @@ add_subdirectory(./dlib-19.23)
 set(onnxruntime_INCLUDE_DIRS ./onnxruntime-linux-x64-gpu-1.10.0/include)
 include_directories(${onnxruntime_INCLUDE_DIRS})
 
-add_executable(e4e_vino main.cc)
+add_executable(e4e_vino main.cc FaceAligner.h FaceAligner.cpp)
+
+target_include_directories(e4e_vino PRIVATE ${PROJECT_SOURCE_DIR}/)
 
 target_link_libraries(
     ${PROJECT_NAME}
